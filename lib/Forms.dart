@@ -17,11 +17,13 @@ class _FormsState extends State<Forms> {
   String name = "";
   String email = "";
   String password = "";
+  String phonenum ="";
 
   void Register() {
     if (_formKey.currentState!.validate()) {
       print("Name: $name");
       print("Email: $email");
+      print("Phone:$phonenum");
       print("Password: $password");
       print("Gender: $selectedGender");
       print("Handicapped: $selectedRadio");
@@ -44,29 +46,44 @@ class _FormsState extends State<Forms> {
               crossAxisAlignment: CrossAxisAlignment.start,  // <-- FIXED
               children: [
                 TextFormField(
-                  decoration: InputDecoration(labelText: "Name"),
+                  decoration: InputDecoration(labelText: "Name",
+                      border: OutlineInputBorder(
+                        borderRadius:BorderRadius.all(Radius.circular(20)),
+                      )),
                   keyboardType: TextInputType.name,
                   validator: (value) =>
                   value!.isEmpty ? "Enter name" : null,
                   onChanged: (value) => name = value,
                 ),
-
+                SizedBox(height:10 ,),
                 TextFormField(
-                  decoration: InputDecoration(labelText: "E-mail"),
+                  decoration: InputDecoration(labelText: "E-mail",
+                  border: OutlineInputBorder(
+                    borderRadius:BorderRadius.all(Radius.circular(20)),
+                  )
+                  ),
                   keyboardType: TextInputType.emailAddress,
                   validator: (value) =>
                   value!.isEmpty ? "Enter email" : null,
                   onChanged: (value) => email = value,
                 ),
-
+                SizedBox(height:10 ,),
                 TextFormField(
-                  decoration: InputDecoration(labelText: "Password"),
+                  decoration: InputDecoration(labelText: "Phone",border: OutlineInputBorder()),
+                  keyboardType: TextInputType.phone,
+                  validator: (value) =>
+                  value!.isEmpty ? "Enter email" : null,
+                  onChanged: (value) => phonenum = value,
+                ),
+                SizedBox(height:10 ,),
+                TextFormField(
+                  decoration: InputDecoration(labelText: "Password",border: OutlineInputBorder()),
                   obscureText: true,
                   validator: (value) =>
                   value!.length < 6 ? "Password must be 6+ chars" : null,
                   onChanged: (value) => password = value,
                 ),
-
+                SizedBox(height:10 ,),
                 DropdownButtonFormField<String>(
                   decoration: InputDecoration(labelText: "Select Gender"),
                   items: ["Male", "Female", "Other"].map((item) {
@@ -81,7 +98,6 @@ class _FormsState extends State<Forms> {
                   validator: (value) =>
                   value == null ? "Select gender" : null,
                 ),
-
                 SizedBox(height: 20),
               Text("Is Handicapped"),
                 Row(

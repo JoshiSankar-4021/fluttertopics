@@ -8,7 +8,9 @@ class First extends StatefulWidget{
   State<StatefulWidget> createState()=>_FirstState();
 }
 
-class _FirstState extends State{
+class   _FirstState extends State{
+  String? selectedRadio;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,6 +21,7 @@ class _FirstState extends State{
       body:Column(
           children:[
             Text("HI THIS IS MY FIRST APP"),
+            //<img src="img url" style="height:,width:"/>
             Image.network(
               'https://stimg.cardekho.com/images/carexteriorimages/630x420/Jaguar/F-Pace/10644/1755774688332/front-left-side-47.jpg?impolicy=resize&imwidth=480',
               fit: BoxFit.cover,
@@ -34,7 +37,37 @@ class _FirstState extends State{
             ),
             ElevatedButton(onPressed: (){
               print("Button pressed");
-            }, child: Text("BUTTON"))
+            }, child: Text("BUTTON")),
+            Row(
+              children:[
+                Radio(
+                  value: "Yes",
+                  groupValue: selectedRadio,
+                  onChanged: (value) {
+                    setState(() {
+                      selectedRadio = value.toString();
+                    });
+                    print(value);
+                  },
+
+                ),
+                Text("Yes"),
+
+                SizedBox(width: 20),
+
+                Radio(
+                  value: "No",
+                  groupValue: selectedRadio,
+                  onChanged: (value) {
+                    setState(() {
+                      selectedRadio = value.toString();
+                    });
+                    print(value);
+                  },
+                ),
+                Text("No"),
+                  ]
+            )
           ]
       )
     );

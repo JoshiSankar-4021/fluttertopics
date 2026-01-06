@@ -27,7 +27,16 @@ class _SecondScreenState extends State<Second> {
               }, child: Text("Forms")),
               ElevatedButton(onPressed: (){
                 Navigator.pushNamed(context, '/first');
-              }, child: Text("First"))
+              }, child: Text("First")),
+              ElevatedButton(onPressed: (){
+                Navigator.pushNamed(context, '/message');
+              }, child: Text("Toast")),
+              ElevatedButton(onPressed: (){
+                Navigator.pushNamed(context, '/example');
+              }, child: Text("ExForm")),
+              ElevatedButton(onPressed: (){
+                Navigator.pushNamed(context, '/guesturs');
+              }, child: Text("Guestures"))
             ],
           ),
         ),
