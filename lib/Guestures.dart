@@ -18,6 +18,23 @@ class _Guestures extends State<Guestures>{
         title: Text("Guesturs"),
         backgroundColor: Colors.green,
       ),
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            ListTile(
+                title: Text("Forms"),
+              onTap: (){
+                  Fluttertoast.showToast(
+                      msg: "Forms was clicked");
+                  Navigator.pushNamed(context, '/forms');
+              },
+            ),
+            ListTile(
+              title: Text("Second"),
+            ),
+          ],
+        )
+      ),
       body: Column(
         children: [
         GestureDetector(

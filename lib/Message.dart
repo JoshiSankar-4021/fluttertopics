@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
-class Messages extends StatefulWidget{
-  const Messages({super.key});
+class Message extends StatefulWidget{
+  const Message({super.key});
   @override
   State<StatefulWidget> createState()=>_MessageState();
 }

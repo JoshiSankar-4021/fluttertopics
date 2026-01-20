@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 
-import 'Messages.dart';
+import 'Message.dart';
 import 'Second.dart';
 import 'Third.dart';
 import 'Forms.dart';
 import 'First.dart';
 import 'Exampleforms.dart';
 import 'Guestures.dart';
+import 'BottomNavigation.dart';
+import 'Lists.dart';
+import 'NavDrawer.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,15 +25,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes:{
-        '/':(context)=> const Second(),
+        '/second':(context)=> const Second(),
         '/third':(context)=>const Third(),
         '/forms':(context)=>const Forms(),
         '/first':(context)=> const First(),
-        '/message':(context)=>const Messages(),
+        '/message':(context)=>const Message(),
         '/example':(context)=> const Example(),
-        '/guesturs':(context)=> const Guestures()
+        '/guesturs':(context)=> const Guestures(),
+        '/lists':(context)=>const Lists(),
+        '/drawer':(context)=>const Navdrawer(),
+        '/':(context)=> const BottomNavigation()
       }
     );
   }
