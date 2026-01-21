@@ -39,11 +39,13 @@ class _SecondScreenState extends State<Second> {
               }, child: Text("Guestures")),
               ElevatedButton(onPressed: (){
                 Navigator.pushNamed(context, '/bottom');
-              }
-              , child: Text("Side nav drawer")),
+              }, child: Text("Side nav drawer")),
               ElevatedButton(onPressed: (){
                 Navigator.pushNamed(context, '/drawer');
-              }, child: Text("DRAWER"))
+              }, child: Text("DRAWER")),
+              ElevatedButton(onPressed: (){
+                Navigator.pushNamed(context, '/listbuild');
+              }, child: Text("List Builder")),
             ],
           ),
         ),

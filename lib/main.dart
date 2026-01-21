@@ -10,6 +10,7 @@ import 'Guestures.dart';
 import 'BottomNavigation.dart';
 import 'Lists.dart';
 import 'NavDrawer.dart';
+import 'Listbuild.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,6 +38,7 @@ class MyApp extends StatelessWidget {
         '/guesturs':(context)=> const Guestures(),
         '/lists':(context)=>const Lists(),
         '/drawer':(context)=>const Navdrawer(),
+        '/listbuild':(context)=>const Listbuild(),
         '/':(context)=> const BottomNavigation()
       }
     );
