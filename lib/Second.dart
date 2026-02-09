@@ -46,6 +46,15 @@ class _SecondScreenState extends State<Second> {
               ElevatedButton(onPressed: (){
                 Navigator.pushNamed(context, '/listbuild');
               }, child: Text("List Builder")),
+              ElevatedButton(onPressed: (){
+                Navigator.pushNamed(context, '/cam_vid');
+              }, child: Text("Cameraa")),
+              ElevatedButton(onPressed: (){
+                Navigator.pushNamed(context, '/screen_saver');
+              }, child: Text("Screen Saverrr")),
+              ElevatedButton(onPressed: (){
+                Navigator.pushNamed(context, '/login_page');
+              }, child: Text("Login Pagee")),
             ],
           ),
         ),

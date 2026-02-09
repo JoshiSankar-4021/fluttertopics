@@ -72,6 +72,71 @@ class _Guestures extends State<Guestures>{
           )
         ],
       ),
+      // bottomSheet: Container(
+      //   decoration: BoxDecoration(
+      //     color: Colors.green,
+      //     borderRadius: BorderRadius.vertical(top:Radius.circular(20)
+      //     ),
+      //   ),
+      //   child: Padding(padding: EdgeInsets.all(16),
+      //   child: Text("TEXT IS HERE"),
+      //   ),
+      // ),
+      // bottomSheet: Container(
+      //   padding: EdgeInsets.all(16),
+      //   decoration: BoxDecoration(
+      //     color: Colors.white,
+      //     borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+      //   ),
+      //   child: Row(
+      //     mainAxisAlignment: MainAxisAlignment.spaceAround,
+      //     children: [
+      //       IconButton(icon: Icon(Icons.thumb_up), onPressed: () {}),
+      //       IconButton(icon: Icon(Icons.share), onPressed: () {}),
+      //       IconButton(icon: Icon(Icons.edit), onPressed: () {}),
+      //       IconButton(icon: Icon(Icons.delete), onPressed: () {}),
+      //     ],
+      //   ),
+      // ),
+      bottomSheet: Container(
+        height: 350,
+        width: 500,
+        padding: EdgeInsets.symmetric(horizontal: 20),
+        decoration: BoxDecoration(
+          color: Colors.green,
+          borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text("Total: ₹1299",
+                style: TextStyle(color: Colors.white, fontSize: 18)),
+            ElevatedButton(
+              onPressed: () {},
+              child: Text("Checkout"),
+            ),
+            Text("Total: ₹1299",
+                style: TextStyle(color: Colors.white, fontSize: 18)),
+            ElevatedButton(
+              onPressed: () {},
+              child: Text("Checkout"),
+            ),
+            Text("Total: ₹1299",
+                style: TextStyle(color: Colors.white, fontSize: 18)),
+            ElevatedButton(
+              onPressed: () {},
+              child: Text("Checkout"),
+            ),
+            Text("Total: ₹1299",
+                style: TextStyle(color: Colors.white, fontSize: 18)),
+            ElevatedButton(
+              onPressed: () {},
+              child: Text("Checkout"),
+            )
+          ],
+        ),
+      ),
+
     );
   }
 }

@@ -11,16 +11,19 @@ import 'BottomNavigation.dart';
 import 'Lists.dart';
 import 'NavDrawer.dart';
 import 'Listbuild.dart';
+import 'Cam_vid.dart';
+import 'Screen_saver.dart';
+import 'Login_page.dart';
 
 void main() {
   runApp(const MyApp());
 }
 //inheritance
-//clases - class -extends or interfaces-interface extends
+//classes - class -extends or interfaces-interface extends
 //class-interface or interface-class--->implements
 
 class MyApp extends StatelessWidget {
-  //constructor--a funtion or method named with same class name is called constructor
+  //constructor--a function or method named with same class name is called constructor
   const MyApp({super.key});
 
   @override
@@ -39,6 +42,9 @@ class MyApp extends StatelessWidget {
         '/lists':(context)=>const Lists(),
         '/drawer':(context)=>const Navdrawer(),
         '/listbuild':(context)=>const Listbuild(),
+        '/cam_vid':(context)=>const Camera(),
+        '/screen_saver':(context)=>const Screen(),
+        '/login_page':(context)=>const Login(),
         '/':(context)=> const BottomNavigation()
       }
     );
